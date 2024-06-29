@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>book list</title>
+</head>
+
+<body>
+  {{>navbarCustomer}}
+  <div class="container col-lg-10 ">
+    <div class="row ">
+
+      <div class="col-lg-4  ms-auto me-auto">
+
+        <div class="card mt-4">
+          <div class="card-header">
+            {{bookDetail.bookNo}}
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">
+              {{bookDetail.bookName}}</h5>
+
+            <p class="card-text">{{bookDetail.Description}}</p>
+            <h5>Amount {{bookDetail.amount}}</h5>
+            <div class="ms-4 justify-content-center"> 
+              <form method="POST" action="/confirmBook">
+                <input type="hidden" name="itemId" value="{{bookDetail._id}}">
+                <button class=" btn-success" type="submit">Confirm</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+  </div>
+
+  </div><!-- /.container -->
+</body>
+
+</html>

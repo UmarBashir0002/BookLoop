@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>book list</title>
+</head>
+
+<body>
+  {{>navbarAdmin}}
+  <div class="container col-lg-10">
+    <div class="row ">
+      {{#each booklist}}
+
+      <div class="col-lg-4">
+
+        <div class="card mt-4">
+          <div class="card-header">
+            {{this.bookNo}}
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">
+              {{this.bookName}}</h5>
+
+            <p class="card-text">{{this.Description}}</p>
+          </div>
+        </div>
+
+      </div>
+      {{/each }}
+
+
+    </div>
+  </div>
+
+  </div><!-- /.container -->
+</body>
+
+</html>
+
+
+
+
+
+{{!--
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <ul>
+    {{#each booklist}}
+    <li>
+      {{this.bookName}}
+
+    </li>
+    {{/each}}
+  </ul>
+</body>
+
+</html> --}}
